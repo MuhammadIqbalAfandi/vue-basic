@@ -13,6 +13,9 @@ function increment(): void {
 </script>
 
 <template>
-  <h1>Counter: {{ count.id }} {{ count.name.join(", ") }}</h1>
+  <h1>
+    Counter: {{ count.id }} <br />
+    {{ count.name.join(", ") }}
+  </h1>
   <button @click="increment">Increment</button>
 </template>

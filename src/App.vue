@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Counter from "./components/Counter.vue";
+import FocusInput from "./components/FocusInput.vue";
 </script>
 
 <template>
-  <Counter />
+  <FocusInput />
 </template>
