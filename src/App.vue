@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import FocusInput from "./components/FocusInput.vue";
+import SayForm from "./components/SayForm.vue";
 </script>
 
 <template>
-  <FocusInput />
+  <SayForm />
 </template>
