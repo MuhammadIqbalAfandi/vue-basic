@@ -1,7 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const hello: string = "<h1>Hello, World!</h1>";
+</script>
 
 <template>
-  <h1 class="hello">Hello, World!</h1>
+  <div class="hello">{{ hello }}</div>
+  <div v-html="hello"></div>
 </template>
 
 <style scoped>
