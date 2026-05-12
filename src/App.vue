@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Style from "./components/Style.vue";
+import Conditional from "./components/Conditional.vue";
 </script>
 
 <template>
-  <Style />
+  <Conditional />
 </template>
