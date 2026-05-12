@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Conditional from "./components/Conditional.vue";
+import TodoList from "./components/TodoList.vue";
 </script>
 
 <template>
-  <Conditional />
+  <TodoList />
 </template>
