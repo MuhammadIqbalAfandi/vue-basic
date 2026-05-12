@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import SayForm from "./components/SayForm.vue";
+import Style from "./components/Style.vue";
 </script>
 
 <template>
-  <SayForm />
+  <Style />
 </template>
