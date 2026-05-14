@@ -5,13 +5,13 @@ const props = defineProps<{
 </script>
 
 <template>
-  <header>
+  <header v-if="$slots.header">
     <slot name="header"> No header content provided. </slot>
   </header>
-  <main>
+  <main v-if="$slots.main">
     <slot name="main"> No content provided. </slot>
   </main>
-  <footer>
+  <footer v-if="$slots.footer">
     <slot name="footer"> No footer content provided. </slot>
   </footer>
 </template>
