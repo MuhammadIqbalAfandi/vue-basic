@@ -7,7 +7,7 @@ const props = defineProps<{
 <template>
   <h1>{{ title }}</h1>
   <main>
-    <slot />
+    <slot> No content provided. </slot>
   </main>
   <footer>
     <p>Copyright 2024</p>
