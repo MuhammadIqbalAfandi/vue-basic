@@ -1,14 +1,9 @@
 <script setup lang="ts">
-import Product from "./components/Product.vue";
+import EmitApp from "./components/EmitApp.vue";
 </script>
 
 <template>
-  <Product />
+  <EmitApp />
 </template>
 
-<style>
-.container {
-  display: flex;
-  gap: 16px;
-}
-</style>
+<style></style>
