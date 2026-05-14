@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import TodoList from "./components/TodoList.vue";
+import EventForm from "./components/EventForm.vue";
 </script>
 
 <template>
-  <TodoList />
+  <EventForm />
 </template>
