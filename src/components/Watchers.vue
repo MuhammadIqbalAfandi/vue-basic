@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watchEffect, type Ref } from "vue";
+import { onWatcherCleanup, ref, watchEffect, type Ref } from "vue";
 
 const productId: Ref<string> = ref("product1");
 const product: Ref<{
@@ -31,6 +31,10 @@ const product: Ref<{
 // );
 
 watchEffect(async () => {
+  onWatcherCleanup(() => {
+    console.log("Cleaning up watcher...");
+  });
+
   try {
     const response = await fetch(`/public/` + `${productId.value}.json`);
     if (response.ok) {
