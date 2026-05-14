@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import EmitApp from "./components/EmitApp.vue";
+import MyInputApp from "./components/MyInputApp.vue";
 </script>
 
 <template>
-  <EmitApp />
+  <MyInputApp />
 </template>
 
 <style></style>
