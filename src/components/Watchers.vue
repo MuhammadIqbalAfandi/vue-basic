@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch, type Ref } from "vue";
+import { ref, watchEffect, type Ref } from "vue";
 
 const productId: Ref<string> = ref("product1");
 const product: Ref<{
@@ -9,26 +9,41 @@ const product: Ref<{
   price: number;
 } | null> = ref(null);
 
-watch(
-  productId,
-  async (newVal, _) => {
-    if (newVal) {
-      try {
-        const response = await fetch(`/public/` + `${newVal}.json`);
-        if (response.ok) {
-          product.value = await response.json();
-        } else {
-          console.error("Failed to fetch product data:", response.statusText);
-          product.value = null;
-        }
-      } catch (error) {
-        console.error("Error fetching product data:", error);
-        product.value = null;
-      }
+// watch(
+//   productId,
+//   async (newVal, _) => {
+//     if (newVal) {
+//       try {
+//         const response = await fetch(`/public/` + `${newVal}.json`);
+//         if (response.ok) {
+//           product.value = await response.json();
+//         } else {
+//           console.error("Failed to fetch product data:", response.statusText);
+//           product.value = null;
+//         }
+//       } catch (error) {
+//         console.error("Error fetching product data:", error);
+//         product.value = null;
+//       }
+//     }
+//   },
+//   { immediate: true },
+// );
+
+watchEffect(async () => {
+  try {
+    const response = await fetch(`/public/` + `${productId.value}.json`);
+    if (response.ok) {
+      product.value = await response.json();
+    } else {
+      console.error("Failed to fetch product data:", response.statusText);
+      product.value = null;
     }
-  },
-  { immediate: true },
-);
+  } catch (error) {
+    console.error("Error fetching product data:", error);
+    product.value = null;
+  }
+});
 </script>
 
 <template>
