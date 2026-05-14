@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import EventForm from "./components/EventForm.vue";
+import FormInputBinding from "./components/FormInputBinding.vue";
 </script>
 
 <template>
-  <EventForm />
+  <FormInputBinding />
 </template>
