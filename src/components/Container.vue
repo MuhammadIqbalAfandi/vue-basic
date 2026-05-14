@@ -5,11 +5,13 @@ const props = defineProps<{
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <header>
+    <slot name="header"> No header content provided. </slot>
+  </header>
   <main>
-    <slot> No content provided. </slot>
+    <slot name="main"> No content provided. </slot>
   </main>
   <footer>
-    <p>Copyright 2024</p>
+    <slot name="footer"> No footer content provided. </slot>
   </footer>
 </template>
