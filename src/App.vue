@@ -1,7 +1,14 @@
 <script setup lang="ts">
-import Note from "./components/Note.vue";
+import Product from "./components/Product.vue";
 </script>
 
 <template>
-  <Note />
+  <Product />
 </template>
+
+<style>
+.container {
+  display: flex;
+  gap: 16px;
+}
+</style>
