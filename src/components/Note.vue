@@ -1,5 +1,14 @@
 <script setup lang="ts">
-import { reactive, ref, useTemplateRef, type Reactive, type Ref } from "vue";
+import {
+  onBeforeMount,
+  onMounted,
+  onUpdated,
+  reactive,
+  ref,
+  useTemplateRef,
+  type Reactive,
+  type Ref,
+} from "vue";
 
 const notes: Reactive<string[]> = reactive([]);
 const note: Ref<string> = ref("");
@@ -11,6 +20,18 @@ const submitNote = () => {
   note.value = "";
   inputRef.value?.focus();
 };
+
+onBeforeMount(() => {
+  console.log("Component is about to mount...");
+});
+
+onMounted(() => {
+  console.log("Component has been mounted.");
+});
+
+onUpdated(() => {
+  console.log("Component has been updated.");
+});
 </script>
 
 <template>
