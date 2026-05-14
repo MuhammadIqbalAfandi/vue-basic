@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Watchers from "./components/Watchers.vue";
+import Note from "./components/Note.vue";
 </script>
 
 <template>
-  <Watchers />
+  <Note />
 </template>
