@@ -1,13 +1,5 @@
-<script setup lang="ts">
-const emit = defineEmits<{
-  increase: [];
-}>();
-
-function handleClick() {
-  emit("increase");
-}
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <button @click="handleClick">Increase</button>
+  <button @click="$emit('increase')">Increase</button>
 </template>

@@ -4,16 +4,12 @@ interface User {
   name: string;
 }
 
-const emit = defineEmits<{
-  share: [User];
-}>();
-
-const user = {
+const user: User = {
   id: 1,
   name: "Iqbal",
 };
 </script>
 
 <template>
-  <button @click="emit('share', user)">Share User</button>
+  <button @click="$emit('share', user)">Share User</button>
 </template>
