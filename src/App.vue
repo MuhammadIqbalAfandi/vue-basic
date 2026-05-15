@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import Container from "./components/Container.vue";
+import UserProfileApp from "./components/UserProfileApp.vue";
 </script>
 
 <template>
   <Container title="My Website">
-    <template #header>
-      <h1>My Website</h1>
-    </template>
     <template #main>
-      <p>Welcome to my website!</p>
+      <UserProfileApp />
     </template>
     <template #footer>
       <p>Copyright 2024</p>
